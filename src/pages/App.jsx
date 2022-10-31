@@ -1,6 +1,6 @@
 import React, { Fragment, Suspense, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import './App.css'
+import '../styles/App.css'
 import { gsap } from 'gsap/dist/gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import * as THREE from 'three'
