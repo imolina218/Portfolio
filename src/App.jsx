@@ -16,10 +16,10 @@ import ProjectsBase from './models/Projectsbase'
 import Projects from './models/Projectscarrusel'
 import StaticObjects from './models/Static'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export const App = () => {
 
+  gsap.registerPlugin(ScrollTrigger)
+  
   const targets = [
     [1.0, 0.8, -0.68], 
     [1.0, 1.0, 1.0],
@@ -241,19 +241,19 @@ export const App = () => {
             </div>
 
           </div>
-
+          
           <div className='contactme'>
             <h3>Contact me</h3>
             <ul>
               <li className='contactList'>
                 <a href='https://github.com/imolina218' target="_blank" rel="noopener noreferrer">
-                  <img src='/img/git.png' alt='GitHub image' />
+                  <img src='/img/git.png' alt='GitHub' />
                 </a>
                 <a href='https://www.linkedin.com/in/molina-ismael-6a5677250/' target="_blank" rel="noopener noreferrer">
-                  <img src='/img/linkedin.png' alt='LinkedIng image' />
+                  <img src='/img/linkedin.png' alt='LinkedIn' />
                 </a>
                 <a href='mailto:imolina218@gmail.com?subject=Job Opportunity&body=Hello!' target="_blank" rel="noopener noreferrer">
-                  <img src='/img/email.png' alt='E-mail image' />
+                  <img src='/img/email.png' alt='E-mail' />
                 </a>
               </li>
             </ul>
