@@ -81,7 +81,7 @@ export const App = () => {
           end: 'bottom bottom',
           /* snap: 1/5, */
           onUpdate: (self) => {
-            {
+            return(
               self.progress === 0 ? (setPosition(positions[0]), setTarget(0)) :
               self.progress <= 0.35 ? (setPosition(positions[1]), setTarget(0)) :
               self.progress <= 0.55 ? (setPosition(positions[2]), setTarget(1)) :
@@ -89,7 +89,7 @@ export const App = () => {
               self.progress <= 0.95 ? (setPosition(positions[4]), setTarget(2)) :
               self.progress >= 1 ? (setPosition(positions[5]), setTarget(0)):
               null
-            }
+            )
           }
         }
       })
