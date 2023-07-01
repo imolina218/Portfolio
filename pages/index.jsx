@@ -35,28 +35,31 @@ export default function Home() {
     [0.0, 8.0, 2.0]
   ]
   const projectsRotation = [
-    [-Math.PI, 0, -Math.PI],
-    [-Math.PI, Math.PI * 0.33, -Math.PI],
-    [-Math.PI, Math.PI * 0.66, -Math.PI],
-    [-Math.PI, Math.PI , -Math.PI],
-    [-Math.PI, Math.PI * 1.33, -Math.PI],
-    [-Math.PI, Math.PI * 1.66, -Math.PI]
+    [-Math.PI, Math.PI, -Math.PI],
+    [-Math.PI, Math.PI * 1.28, -Math.PI],
+    [-Math.PI, Math.PI * 1.57, -Math.PI],
+    [-Math.PI, Math.PI * 1.86 , -Math.PI],
+    [-Math.PI, Math.PI * 2.14, -Math.PI],
+    [-Math.PI, Math.PI * 2.43, -Math.PI],
+    [-Math.PI, Math.PI * 2.71, -Math.PI]
   ]
   const linksGit = [
-    ['https://github.com/imolina218/FrikiWiki.git'],
+    ['https://github.com/imolina218/Starter-r3f-Bliss'],
     ['https://github.com/imolina218/BeetleRose.git'],
+    ['https://github.com/imolina218/Portfolio.git'],
+    ['https://github.com/imolina218/Electrica_Citharae.git'],
+    ['https://github.com/imolina218/FrikiWiki.git'],
     ['https://github.com/imolina218/RecipesSearcher.git'],
     ['https://github.com/imolina218/TeasAndCups.git'],
-    ['https://github.com/imolina218/Portfolio.git'],
-    ['https://github.com/imolina218/Electrica_Citharae.git']
   ]
   const linksDeploy = [
-    ['https://friki-wiki.vercel.app/'],
+    ['https://starter-r3f-bliss.vercel.app/'],
     ['https://beetle-rose.vercel.app/'],
-    ['https://recipes-searcher.vercel.app/'],
-    ['https://teas-and-cups.vercel.app/'],
     ['https://portfolio-git-main-imolina218.vercel.app/'],
-    ['https://cosmic-griffin-52857c.netlify.app/']
+    ['https://cosmic-griffin-52857c.netlify.app/'],
+    ['https://friki-wiki.vercel.app/'],
+    ['https://recipes-searcher.vercel.app/'],
+    ['https://teas-and-cups.vercel.app/']
   ]
 
   const [position, setPosition] = useState(positions[0])
@@ -65,10 +68,10 @@ export default function Home() {
   const [rotationIndex, setRotationIndex] = useState(0)
   
   const handlePrev = () => {
-    rotationIndex > 0 ? setRotationIndex(rotationIndex - 1) : setRotationIndex(5)
+    rotationIndex > 0 ? setRotationIndex(rotationIndex - 1) : setRotationIndex(6)
   }
   const handleNext = () => {
-    rotationIndex < 5 ? setRotationIndex(rotationIndex + 1) : setRotationIndex(0) 
+    rotationIndex < 6 ? setRotationIndex(rotationIndex + 1) : setRotationIndex(0) 
   }
 
   const UpdateObjects = () => {
@@ -223,10 +226,9 @@ export default function Home() {
                 {
                   rotationIndex === 0 ?
                     <p>
-                      Friki Wiki focuses on an index of 4 wikis worth it for any kind of friki that 
-                      wants to expand the knowledge that defines him/her as a friki. The website 
-                      is programmed with Next.js using CSS modules to consult
-                      different APIs.
+                      BLISS is a website that presents a 3d experience of a fictional Intenet provider company,
+                      with a polygon style, with baked simulations making it an experience. The Website is programmed with
+                      React-Three-Fiber, Theatre.js, 3D models made in Blender and designed in Figma.
                     </p>
                   : rotationIndex === 1 ?
                     <p>
@@ -236,28 +238,35 @@ export default function Home() {
                     </p>
                   : rotationIndex === 2 ?
                     <p>
+                      This is my portfolio where you can find information about me, my skills, my projects
+                      and how to contact me. The website is programmed in React.js with Next.js,
+                      React-Three-Fiber and Blender for the 3D models. 
+                    </p>
+                  : rotationIndex === 3 ?
+                    <p>
+                      Electrica Citharae is a single web application that gives a concise narrative 
+                      about the two types of solid-body electric guitars that defined decades of music 
+                      history. The website is programmed with three.js and the 3D models were made in Blender.  
+                    </p>
+                  : rotationIndex === 4 ?
+                    <p>
+                      Friki Wiki focuses on an index of 4 wikis worth it for any kind of friki that 
+                      wants to expand the knowledge that defines him/her as a friki. The website 
+                      is programmed with Next.js using CSS modules to consult
+                      different APIs. 
+                    </p>
+                  : rotationIndex === 5 ?
+                    <p>
                       Recipes Searcher is a single web application that searches different types 
                       of recipes by name, origin, category or ingredient. The website is programmed 
                       in React.js and react-bootstrap using context with the data provided from 
                       TheMealDB API.
                     </p>
-                  : rotationIndex === 3 ?
+                  : rotationIndex === 6 ?
                     <p>
                       Teas&Cups focuses on informing the user about the world of teas and cups and improving
                       their tea experience. The website is programmed in React.js with Next.js using 
                       CSS modules.
-                    </p>
-                  : rotationIndex === 4 ?
-                    <p>
-                      This is my portfolio where you can find information about me, my skills, my projects
-                      and how to contact me. The website is programmed in React.js with Next.js,
-                      React-Three-Fiber and Blender for the 3D models. 
-                    </p>
-                  : rotationIndex === 5 ?
-                    <p>
-                      Electrica Citharae is a single web application that gives a concise narrative 
-                      about the two types of solid-body electric guitars that defined decades of music 
-                      history. The website is programmed with three.js and the 3D models were made in Blender.  
                     </p>
                   : null
                 }
